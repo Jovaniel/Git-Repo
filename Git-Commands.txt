@@ -1,0 +1,32 @@
+Git Global Commands: (for terminal)
+
+git clone -> Bring a repository that is hosted somewhere like Github into a folder on your local machine.
+git add -> Track your files and changes in Git.
+git commit -> Save your files in Git.
+git push -> Upload Git commits to a remote repo, like Github.
+git pull -> Download changes from remote repo to your local machine, the opposite of push.
+
+/ Repo Commands /
+
+git status -> show the status of the files that we are currently changing, or the files we changed before.
+git log -> log of all your commits. They are ordered in reverse order. The top one is the newest commit.
+git commit -m "message we want to give" -> allows you to commit the changes into de repo with a message (-m).
+git commit -am "message we want to give" -> -a stands for 'add', -m stands for 'message'. Works only with modified files, not with new created files.
+
+/ Branch Commands / Can be used as steps ->
+
+git branch -> to see how many branches exists, and in which branch are we in that moment (*).
+git checkout -> used to change between branches.
+git checkout -b (name of the branch)-> used to create a new branch.
+git diff (name of the branch we want to see the new changes)-> show changes that have been made, it compares to versions of the code to see the changes.
+git merge (name of the branch we want to merge from) -> it will merge all the changes we've made in the other branch.
+git push -u (or --set-upstream) origin (name of the branch) -> we push all the changes to the github repo.
+git branch -d (name of the branch) -> here we delete the given branch.
+
+/ Undoing in Git before commiting/
+
+git reset -> To reset all the files that we changed in that 'git add'
+git reset (name of the file) -> To reset that specified file.
+git reset HEAD -> Resets the last commit.
+git reset HEAD~1 -> Tells you want to go back one commit further. Es decir, no el ultimo commit, sino el anterior al ultimo.
+git reset --hard (hash code) -> You can get that hash code using 'git log'. After that, 'git reset --hard' will completely remove all the changes on that given (hash), which is the file we modified.
